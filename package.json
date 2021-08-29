@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server/app.js",
+    "start": "set NODE_ENV=production&&node server/app.js"
+  },
+  "author": "Rohit Mahesh",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.6"
+  }
+}
